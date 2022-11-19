@@ -22,7 +22,7 @@ header {
   z-index: 100;
   top: 0;
   background-color: #fff;
-  height: 6rem;
+  height: 5rem;
   align-items: center;
 }
 
@@ -32,11 +32,18 @@ section {
   overflow: hidden;
 }
 
+section .title {
+  text-align: center;
+  margin: 4% 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
 /* Header section  */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   align-content: center;
 }
 
@@ -49,14 +56,18 @@ section {
   max-width: 75px;
 }
 
-
 .logo a {
   color: #a92570;
+}
+
+.logo h1 {
+  font-weight: 700;
 }
 
 .logo span {
   color: #288692;
 }
+
 nav ul {
   display: flex;
   justify-content: space-around;
@@ -73,7 +84,7 @@ nav ul li {
 #home {
   position: relative;
   /* margin-top:6rem ; */
-  height: 95vh;
+  height: 100vh;
   background: url("./assets/images/team\ of\ doctors\ \(7\).jpg") no-repeat top;
   /* background-repeat: no-repeat;
   background-position:top; */
@@ -85,23 +96,85 @@ nav ul li {
 
 .welcome-text {
   display: inline-block !important;
-  position:absolute;
+  position: absolute;
   bottom: 5rem;
   right: 10rem;
 }
 
-
 /* team section  */
+#team {
+  background-color: #288692;
+  position: relative;
+}
 
-.team img {
-  width: 100px;
-  height: 100px;
+.team {
+  display: flex;
+  justify-content: space-around;
+}
+.doctors {
+  width: 25%;
+  max-height: 40%;
+}
+
+.doctors img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Services section  */
 
-/* Partners section  */
+#services {
+  position: relative;
+}
+
+.services {
+  height: 100%;
+  width: 100%;
+}
+
+.services ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+/* About section  */
+
+#about {
+  position: relative;
+  background-color: #a92570;
+}
+
+.about {
+  display: flex;
+  justify-content:space-between;
+}
+
+.about img {
+  max-width: 300px;
+  margin-right: 25%;
+}
 
 /* Contact section  */
 
+#contact {
+  position: relative;
+}
+.contact {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* Footer section  */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+footer a {
+  color: #a92570;
+}
