@@ -120,10 +120,11 @@ nav ul li {
   color: #383838;
 }
 .doctors {
-  height: 26rem;
-  width: 25%;
+  height: 25rem;
+  width: 18rem;
   background-color: #fff;
-  box-shadow: 5px 5px 5px #383838;
+  /* box-shadow: 5px 5px 5px #383838; */
+  box-shadow: 0 0 10px 0 #383838;
   border-radius: 10px;
   overflow: hidden;
   padding: 3% 2%;
