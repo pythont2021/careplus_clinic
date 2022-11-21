@@ -120,10 +120,11 @@ nav ul li {
   color: #383838;
 }
 .doctors {
-  height: 26rem;
-  width: 25%;
+  height: 25rem;
+  width: 18rem;
   background-color: #fff;
-  box-shadow: 5px 5px 5px #383838;
+  /* box-shadow: 5px 5px 5px #383838; */
+  box-shadow: 0 0 10px 0 #383838;
   border-radius: 10px;
   overflow: hidden;
   padding: 3% 2%;
@@ -135,6 +136,9 @@ nav ul li {
   border-radius: 50%;
   margin-left: 50%;
   transform: translateX(-50%);
+  border: thick double #cbcbcb;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .team_text {
@@ -148,14 +152,10 @@ nav ul li {
   height: 80vh;
 }
 
-.services {
-  height: 100%;
-  width: 100%;
-}
 
 .services ul {
   display: flex;
-  margin-top: 8rem;
+  margin-top: 6rem;
   justify-content: space-between;
   align-content: center;
   align-items: center;
@@ -167,7 +167,7 @@ nav ul li {
 .services ul li p {
   margin-top: 1rem;
   text-align: center;
-  font-size:larger;
+  font-size: larger;
 }
 
 /* About section  */
