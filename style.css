@@ -41,8 +41,8 @@ section {
 section .title {
   text-align: center;
   margin: 4% 0;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 /* Header section  */
@@ -163,6 +163,8 @@ nav ul li {
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  text-align: center;
+  color: #383838;
 }
 
 .services ul li img {
@@ -171,7 +173,8 @@ nav ul li {
 .services ul li p {
   margin-top: 1rem;
   text-align: center;
-  font-size: larger;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 /* About section  */
