@@ -37,8 +37,8 @@
         <nav>
           <ul>
             <li><a href="#home">home</a></li>
-            <li><a href="#team">team</a></li>
-            <li><a href="#services">services</a></li>
+            <li><a href="#team">specialists</a></li>
+            <li><a href="#services">facilities</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
@@ -46,11 +46,62 @@
       </div>
     </header>
     <section id="home">
-      <div class="welcome-text">
-        <h1>CARE PLUS</h1>
-        <p>Multispeciality Clinic</p>
-
-        <h2>Book Now</h2>
+      <div class="container-fluid home">
+        <div class="welcome-text">
+          <h1>
+            Better <br />
+            <span>Care</span> <br /> And Better <br />
+            <span>Understanding... </span>
+          </h1>
+          <ul>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-check-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                />
+              </svg>
+              Pediatrics
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-check-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                />
+              </svg>
+              Orthopaedics
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-check-circle-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+                />
+              </svg>
+              Obstetrics and Gynaecology
+            </li>
+          </ul> <br><br>
+          <a href="#booking">BOOK YOUR APPOINTMENT NOW.</a>
+        </div>
       </div>
     </section>
 
@@ -111,7 +162,7 @@
     </section>
 
     <section id="services">
-      <h1 class="title">Services</h1>
+      <h1 class="title">Facilities</h1>
       <div class="container-xl services">
         <ul>
           <li>
@@ -168,7 +219,7 @@
       <h1 class="title">Contact Us</h1>
       <div class="container-xl">
         <div class="contact row">
-          <div class="send_message col-6">
+          <!-- <div class="send_message col-6">
             <form action="#">
               <h3>Feel free ask anything</h3>
               <div class="mb-4">
@@ -196,10 +247,87 @@
                 ></textarea>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary" type="submit">
-                  Submit
-                </button>
+                <button class="btn btn-primary" type="submit">Submit</button>
               </div>
+            </form>
+          </div> -->
+          <div class="appointment_form col-6">
+            <form action="#" method="POST" id="booking" accept-charset="UTF-8">
+              <fieldset>
+                <legend>BOOK YOUR APPOINTMENT NOW</legend>
+                <label for="full_name">Patient's Full Name</label> <br />
+                <input
+                  type="text"
+                  name="full_name"
+                  placeholder="Full name"
+                  class="input"
+                  required
+                />
+                <br />
+
+                <label for="full_name">Email ID</label> <br />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email *"
+                  class="input"
+                  required
+                /><br />
+                <label for="full_name">Mobile Number</label> <br />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone *"
+                  class="input"
+                />
+
+                <label>
+                  Date <br />
+                  <input
+                    type="date"
+                    name="Appointment request"
+                    class="input"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <input type="hidden" name="Morning desired" value="no" />
+                  <input type="checkbox" name="Morning desired" value="yes" />
+                  Morning
+                </label>
+                <label>
+                  <input type="hidden" name="Afternoon desired" value="no" />
+                  <input type="checkbox" name="Afternoon desired" value="yes" />
+                  Afternoon
+                </label>
+
+                <p>Confirmation requested by</p>
+                <div class="inline">
+                  <label>
+                    <input
+                      type="radio"
+                      name="Confirmation requested by"
+                      value="email"
+                      checked
+                    />
+                    Email
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="Confirmation requested by"
+                      value="phone"
+                    />
+                    Phone call
+                  </label>
+                </div>
+                <input
+                  type="submit"
+                  value="SUBMIT"
+                  class="btn btn-light submit"
+                />
+              </fieldset>
             </form>
           </div>
           <div class="location col-6">
