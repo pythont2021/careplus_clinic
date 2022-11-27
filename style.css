@@ -23,9 +23,6 @@ ul li {
 }
 header {
   display: flex;
-  position: sticky;
-  z-index: 100;
-  top: 0;
   background-color: #fff;
   height: 4.5rem;
   align-items: center;
@@ -33,8 +30,8 @@ header {
 }
 
 section {
-  max-width: 100vw;
-  height: 100vh;
+  width: 100vw;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -43,6 +40,7 @@ section .title {
   margin: 4% 0;
   font-size: 2rem;
   font-weight: 600;
+  font-family: "DM Serif Display", sans-serif;
 }
 
 /* Header section  */
@@ -97,14 +95,13 @@ nav ul li {
 #home {
   position: relative;
   /* margin-top:6rem ; */
-  height: 95vh;
-  background: url("./assets/images/team\ of\ doctors\ \(7\).jpg") no-repeat top;
-  /* background-repeat: no-repeat;
-  background-position:top; */
+  height: 75vh;
+  background: url("./assets/images/team\ of\ doctors\ \(6\)\ copy.jpg")
+    no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .home {
@@ -115,9 +112,8 @@ nav ul li {
 .welcome-text {
   width: 40%;
   position: absolute;
-  right: 2%;
-  top: 15%;
- 
+  left: 2%;
+  margin: 4% 0;
 }
 
 .welcome-text h1 {
@@ -125,14 +121,13 @@ nav ul li {
   top: 50%; */
   display: inline-block;
   font-size: 3rem;
-  color: #a92570;
-  font-family: 'Times New Roman', Times, serif;
-  
+  color: #288692;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .welcome-text h1 span {
-  color: #288692;
-  font-size: 4.5rem;
+  color: #a92570;
+  font-size: 6rem;
   font-weight: 700;
 }
 
@@ -142,9 +137,8 @@ nav ul li {
   padding: 1.5%;
   color: #fff;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
-
 }
 
 .welcome-text ul {
@@ -154,7 +148,6 @@ nav ul li {
   color: #0093de;
   font-size: 1.5rem;
   font-weight: 500;
-
 }
 
 .appointment_form {
