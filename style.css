@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: #fff;
-  color: black;
+  color: #383838;
 }
 
 a {
@@ -21,17 +21,15 @@ a {
 ul li {
   list-style: none;
 }
+
 header {
-  display: flex;
   background-color: #fff;
-  height: 4.5rem;
-  align-items: center;
-  box-shadow: 0px 3px 10px rgb(121, 120, 120);
+  padding: 10px 0;
 }
 
 section {
   width: 100vw;
-  height: 80vh;
+  height: 540px;
   overflow: hidden;
 }
 
@@ -39,8 +37,8 @@ section .title {
   text-align: center;
   margin: 4% 0;
   font-size: 2rem;
-  font-weight: 600;
-  font-family: "DM Serif Display", sans-serif;
+  font-weight: 500;
+  /* font-family: "DM Serif Display", sans-serif; */
 }
 
 /* Header section  */
@@ -50,7 +48,9 @@ section .title {
   align-items: center;
   align-content: center;
 }
-
+.header p {
+  margin-bottom: 0rem !important;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -77,17 +77,31 @@ section .title {
   color: #288692;
 }
 
+.enquiry {
+  color: #0a7d98;
+  font-family: "Roboto", sans-serif;
+}
+.enquiry p span {
+  padding-right: 0.5rem;
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
+  align-self: center;
   align-items: center;
-  align-content: center;
+  margin-bottom: 0rem !important;
 }
 
-nav ul li {
+nav ul li a {
   margin-left: 2rem;
   font-size: larger;
   font-weight: 600;
+  color: #a92570;
+}
+nav ul li a:hover {
+  color: #0093de;
+  border-bottom: 2px solid #a92570;
 }
 
 /* home section  */
@@ -95,7 +109,6 @@ nav ul li {
 #home {
   position: relative;
   /* margin-top:6rem ; */
-  height: 75vh;
   background: url("./assets/images/team\ of\ doctors\ \(6\)\ copy.jpg")
     no-repeat top center fixed;
   -webkit-background-size: cover;
@@ -107,47 +120,44 @@ nav ul li {
 .home {
   position: relative;
   height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: start;
 }
 
 .welcome-text {
-  width: 40%;
-  position: absolute;
-  left: 2%;
-  margin: 4% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 80%;
 }
 
 .welcome-text h1 {
-  /* position: relative;
-  top: 50%; */
   display: inline-block;
   font-size: 3rem;
-  color: #288692;
+  /* color: #288692; */
+  color: #6699a0;
   font-family: "Times New Roman", Times, serif;
+  line-height: 1;
+  border-right: 3px solid white;
+  padding-right: 2rem;
+  text-shadow: 0px 1px 1px black;
 }
 
 .welcome-text h1 span {
-  color: #a92570;
+  /* color: #a92570; */
+  color: #a85684;
   font-size: 6rem;
   font-weight: 700;
 }
 
-.welcome-text a {
-  background-color: rgba(56, 56, 56, 0.4);
-  text-align: center;
-  padding: 1.5%;
-  color: #fff;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
 .welcome-text ul {
   display: inline-block;
-  position: relative;
-  top: 60%;
-  color: #0093de;
+  color: #4ab4e6;
   font-size: 1.5rem;
   font-weight: 500;
+  text-shadow: 0px 1px 1px black;
 }
 
 .appointment_form {
@@ -155,6 +165,11 @@ nav ul li {
   padding: 1rem;
   border-radius: 15px;
   color: #fff;
+}
+
+.book-apt-btn {
+  font-size: larger;
+  font-weight: 900;
 }
 
 .appointment_form legend {
@@ -196,7 +211,7 @@ input::placeholder {
 
 /* team section  */
 #team {
-  background-color: #288692;
+  background-color: #6699a0;
   position: relative;
 }
 
@@ -207,28 +222,36 @@ input::placeholder {
 .team {
   display: flex;
   justify-content: space-between;
-  color: #383838;
 }
-.doctors {
-  height: 25rem;
+.doctor-card {
+  height: 20rem;
   width: 18rem;
   background-color: #fff;
   /* box-shadow: 5px 5px 5px #383838; */
   box-shadow: 0 0 10px 0 #383838;
   border-radius: 10px;
   overflow: hidden;
-  padding: 3% 2%;
+  padding: 2% 1.5%;
+  text-align: center;
 }
 
-.doctors img {
-  width: 150px;
-  height: 150px;
+.doctor-card img {
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   margin-left: 50%;
   transform: translateX(-50%);
   border: thick double #cbcbcb;
   object-fit: cover;
   object-position: center top;
+}
+
+.doctor-name {
+  font-size: 1.5rem;
+}
+
+.doctor-qualification {
+  font-size: 0.8rem;
 }
 
 .team_text {
@@ -266,7 +289,7 @@ input::placeholder {
 
 #about {
   position: relative;
-  background-color: #a92570;
+  background-color: #a85684;
 }
 
 #about h1 {
@@ -275,21 +298,17 @@ input::placeholder {
 
 .about {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
+  /* justify-content: space-around; */
+
   color: #fff;
 }
 
 .about img {
   max-width: 50%;
-  /* margin-left: 25%; */
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px #000;
 }
 
 .about p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /* Contact section  */
@@ -303,7 +322,7 @@ input::placeholder {
 
 /* Footer section  */
 footer {
-  background-color: #000;
+  background-color: rgb(56, 56, 56);
   color: #fff;
   text-align: center;
 }
