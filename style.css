@@ -11,30 +11,34 @@ html {
 
 body {
   background-color: #fff;
-  color: black;
+  color: #383838;
 }
 
 a {
   color: black;
   text-decoration: none;
 }
+input {
+  border: none;
+  outline: none;
+}
+input::placeholder {
+  color: #5a5057;
+  font-weight: 400;
+}
+
 ul li {
   list-style: none;
 }
+
 header {
-  display: flex;
-  position: sticky;
-  z-index: 100;
-  top: 0;
   background-color: #fff;
-  height: 4.5rem;
-  align-items: center;
-  box-shadow: 0px 3px 10px rgb(121, 120, 120);
+  padding: 10px 0;
 }
 
 section {
-  max-width: 100vw;
-  height: 100vh;
+  width: 100vw;
+  height: 540px;
   overflow: hidden;
 }
 
@@ -42,7 +46,8 @@ section .title {
   text-align: center;
   margin: 4% 0;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
+  /* font-family: "DM Serif Display", sans-serif; */
 }
 
 /* Header section  */
@@ -52,7 +57,9 @@ section .title {
   align-items: center;
   align-content: center;
 }
-
+.header p {
+  margin-bottom: 0rem !important;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -79,87 +86,131 @@ section .title {
   color: #288692;
 }
 
+.enquiry {
+  color: #0a7d98;
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+}
+.enquiry p span {
+  padding-right: 0.5rem;
+}
+
 nav ul {
   display: flex;
   justify-content: space-around;
+  align-self: center;
   align-items: center;
-  align-content: center;
+  margin-bottom: 0rem !important;
 }
 
-nav ul li {
+nav ul li a {
   margin-left: 2rem;
   font-size: larger;
   font-weight: 600;
+  color: #a92570;
+}
+nav ul li a:hover {
+  color: #0093de;
+  border-bottom: 2px solid #a92570;
+}
+
+.btn {
+  box-shadow: none !important;
 }
 
 /* home section  */
 
 #home {
-  position: relative;
+  /* position: relative; */
   /* margin-top:6rem ; */
-  height: 95vh;
-  background: url("./assets/images/team\ of\ doctors\ \(7\).jpg") no-repeat top;
-  /* background-repeat: no-repeat;
-  background-position:top; */
+  background: url("./assets/images/team\ of\ doctors\ \(6\)\ copy.jpg")
+    no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 100%;
+  background-size: cover;
+  box-shadow: inset 50px 0px 150px black;
 }
 
 .home {
   position: relative;
   height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: start;
 }
 
-.welcome-text {
-  width: 40%;
-  position: absolute;
-  right: 2%;
-  top: 15%;
- 
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 80%;
 }
-
-.welcome-text h1 {
-  /* position: relative;
-  top: 50%; */
+.text {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid white;
+}
+.text h1 {
   display: inline-block;
   font-size: 3rem;
-  color: #a92570;
-  font-family: 'Times New Roman', Times, serif;
-  
+  /* color: #288692; */
+  color: #6699a0;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1;
+  border-right: 2px solid white;
+  padding-right: 2rem;
+  text-shadow: 0px 1px 1px black;
 }
 
-.welcome-text h1 span {
-  color: #288692;
-  font-size: 4.5rem;
+.text h1 span {
+  /* color: #a92570; */
+  color: #a85684;
+  font-size: 6rem;
   font-weight: 700;
 }
 
-.welcome-text a {
-  background-color: rgba(56, 56, 56, 0.4);
-  text-align: center;
-  padding: 1.5%;
-  color: #fff;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-weight: 600;
-
-}
-
-.welcome-text ul {
+.text ul {
   display: inline-block;
-  position: relative;
-  top: 60%;
-  color: #0093de;
+  color: #4ab4e6;
   font-size: 1.5rem;
   font-weight: 500;
+  text-shadow: 0px 1px 1px black;
+}
 
+.book-apt-btn {
+  /* text-align:center; */
+  margin-top: 2rem;
+  margin-left: 0 !important;
+  transition: none !important;
+}
+
+.btn-primary {
+  margin-left: 19rem;
+}
+
+.model-container {
+  /* display: inline-flex; */
+  display: none;
+  position: fixed;
+  justify-content: center;
+  padding: 5% 10%;
+  backdrop-filter: blur(25px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+  /* transition: 2s; */
 }
 
 .appointment_form {
+  position: relative;
+  max-width: 24rem;
+  max-height: 32rem;
   background-color: rgba(56, 56, 56, 0.4);
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-radius: 15px;
   color: #fff;
 }
@@ -167,17 +218,9 @@ nav ul li {
 .appointment_form legend {
   font-size: 1.3rem;
   font-weight: 700;
-  /* color: #fff; */
-}
-
-input {
-  border: none;
-  outline: none;
-}
-
-input::placeholder {
-  color: #5a5057;
-  font-weight: 400;
+  /* color: #6699a0; */
+  /* color: #0093de; */
+  
 }
 
 .appointment_form .input {
@@ -195,15 +238,33 @@ input::placeholder {
   margin-top: 1rem;
   width: 100%;
   font-weight: 800 !important;
+  background-color: #288692; 
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+.submit:hover{
+  background-color: #a85684;
+  color: #fff;
+}
+.close svg {
+  display: inline-flex;
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  /* color: rgba(211, 5, 5, 0.548); */
+  color: #a92570;
+  cursor: pointer;
 }
 
-/* .welcome-text {
+/* .home-text {
  
 } */
 
 /* team section  */
 #team {
-  background-color: #288692;
+  background-color: #6699a0;
   position: relative;
 }
 
@@ -214,28 +275,37 @@ input::placeholder {
 .team {
   display: flex;
   justify-content: space-between;
-  color: #383838;
 }
-.doctors {
-  height: 25rem;
+.doctor-card {
+  height: 20rem;
   width: 18rem;
   background-color: #fff;
   /* box-shadow: 5px 5px 5px #383838; */
-  box-shadow: 0 0 10px 0 #383838;
+  /* box-shadow: 0 0 10px 0 #383838; */
+  box-shadow: 0px 15px 10px -15px #383838;
   border-radius: 10px;
   overflow: hidden;
-  padding: 3% 2%;
+  padding: 2% 1.5%;
+  text-align: center;
 }
 
-.doctors img {
-  width: 150px;
-  height: 150px;
+.doctor-card img {
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   margin-left: 50%;
   transform: translateX(-50%);
   border: thick double #cbcbcb;
   object-fit: cover;
   object-position: center top;
+}
+
+.doctor-name {
+  font-size: 1.5rem;
+}
+
+.doctor-qualification {
+  font-size: 0.8rem;
 }
 
 .team_text {
@@ -273,7 +343,7 @@ input::placeholder {
 
 #about {
   position: relative;
-  background-color: #a92570;
+  background-color: #a85684;
 }
 
 #about h1 {
@@ -281,22 +351,21 @@ input::placeholder {
 }
 
 .about {
+  height: 20%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
+  /* align-items: center;
+  align-content: center; */
   color: #fff;
 }
 
 .about img {
-  max-width: 50%;
-  /* margin-left: 25%; */
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px #000;
+  max-width: 70%;
+  margin-left: 20%;
 }
 
 .about p {
   font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 /* Contact section  */
@@ -307,13 +376,26 @@ input::placeholder {
 .contact {
   justify-content: space-around;
 }
+.contact-form-btn button {
+  margin-left: 0 !important;
+  transition: none !important;
+}
+
+.contact-form-btn button:hover {
+  background-color: 0;
+}
 
 /* Footer section  */
 footer {
-  background-color: #000;
+  background-color: rgb(56, 56, 56);
   color: #fff;
   text-align: center;
+  font-size: smaller;
 }
 footer a {
-  color: #a92570;
+  color: #6699a0;
+}
+footer a:hover {
+  color: #a85684;
+  margin-left: 10px;
 }
