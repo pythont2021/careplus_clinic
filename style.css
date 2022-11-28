@@ -18,6 +18,15 @@ a {
   color: black;
   text-decoration: none;
 }
+input {
+  border: none;
+  outline: none;
+}
+input::placeholder {
+  color: #5a5057;
+  font-weight: 400;
+}
+
 ul li {
   list-style: none;
 }
@@ -37,7 +46,7 @@ section .title {
   text-align: center;
   margin: 4% 0;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 700;
   /* font-family: "DM Serif Display", sans-serif; */
 }
 
@@ -80,6 +89,7 @@ section .title {
 .enquiry {
   color: #0a7d98;
   font-family: "Roboto", sans-serif;
+  font-size: large;
 }
 .enquiry p span {
   padding-right: 0.5rem;
@@ -104,10 +114,14 @@ nav ul li a:hover {
   border-bottom: 2px solid #a92570;
 }
 
+.btn {
+  box-shadow: none !important;
+}
+
 /* home section  */
 
 #home {
-  position: relative;
+  /* position: relative; */
   /* margin-top:6rem ; */
   background: url("./assets/images/team\ of\ doctors\ \(6\)\ copy.jpg")
     no-repeat top center fixed;
@@ -115,6 +129,7 @@ nav ul li a:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  box-shadow: inset 50px 0px 150px black;
 }
 
 .home {
@@ -126,33 +141,38 @@ nav ul li a:hover {
   justify-content: start;
 }
 
-.welcome-text {
+.home-text {
   display: flex;
   flex-direction: column;
   justify-content: start;
   width: 80%;
 }
-
-.welcome-text h1 {
+.text {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid white;
+}
+.text h1 {
   display: inline-block;
   font-size: 3rem;
   /* color: #288692; */
   color: #6699a0;
   font-family: "Times New Roman", Times, serif;
   line-height: 1;
-  border-right: 3px solid white;
+  border-right: 2px solid white;
   padding-right: 2rem;
   text-shadow: 0px 1px 1px black;
 }
 
-.welcome-text h1 span {
+.text h1 span {
   /* color: #a92570; */
   color: #a85684;
   font-size: 6rem;
   font-weight: 700;
 }
 
-.welcome-text ul {
+.text ul {
   display: inline-block;
   color: #4ab4e6;
   font-size: 1.5rem;
@@ -160,32 +180,47 @@ nav ul li a:hover {
   text-shadow: 0px 1px 1px black;
 }
 
-.appointment_form {
-  background-color: rgba(56, 56, 56, 0.4);
-  padding: 1rem;
-  border-radius: 15px;
-  color: #fff;
+.book-apt-btn {
+  /* text-align:center; */
+  margin-top: 2rem;
+  margin-left: 0 !important;
+  transition: none !important;
 }
 
-.book-apt-btn {
-  font-size: larger;
-  font-weight: 900;
+.btn-primary {
+  margin-left: 19rem;
+}
+
+.model-container {
+  /* display: inline-flex; */
+  display: none;
+  position: fixed;
+  justify-content: center;
+  padding: 5% 10%;
+  backdrop-filter: blur(25px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+  /* transition: 2s; */
+}
+
+.appointment_form {
+  position: relative;
+  max-width: 24rem;
+  max-height: 32rem;
+  background-color: rgba(56, 56, 56, 0.4);
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  color: #fff;
 }
 
 .appointment_form legend {
   font-size: 1.3rem;
   font-weight: 700;
-  /* color: #fff; */
-}
-
-input {
-  border: none;
-  outline: none;
-}
-
-input::placeholder {
-  color: #5a5057;
-  font-weight: 400;
+  /* color: #6699a0; */
+  /* color: #0093de; */
+  
 }
 
 .appointment_form .input {
@@ -203,9 +238,27 @@ input::placeholder {
   margin-top: 1rem;
   width: 100%;
   font-weight: 800 !important;
+  background-color: #288692; 
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+.submit:hover{
+  background-color: #a85684;
+  color: #fff;
+}
+.close svg {
+  display: inline-flex;
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  /* color: rgba(211, 5, 5, 0.548); */
+  color: #a92570;
+  cursor: pointer;
 }
 
-/* .welcome-text {
+/* .home-text {
  
 } */
 
@@ -228,7 +281,8 @@ input::placeholder {
   width: 18rem;
   background-color: #fff;
   /* box-shadow: 5px 5px 5px #383838; */
-  box-shadow: 0 0 10px 0 #383838;
+  /* box-shadow: 0 0 10px 0 #383838; */
+  box-shadow: 0px 15px 10px -15px #383838;
   border-radius: 10px;
   overflow: hidden;
   padding: 2% 1.5%;
@@ -297,18 +351,21 @@ input::placeholder {
 }
 
 .about {
+  height: 20%;
   display: flex;
-  /* justify-content: space-around; */
-
+  /* align-items: center;
+  align-content: center; */
   color: #fff;
 }
 
 .about img {
-  max-width: 50%;
+  max-width: 70%;
+  margin-left: 20%;
 }
 
 .about p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 /* Contact section  */
@@ -319,13 +376,26 @@ input::placeholder {
 .contact {
   justify-content: space-around;
 }
+.contact-form-btn button {
+  margin-left: 0 !important;
+  transition: none !important;
+}
+
+.contact-form-btn button:hover {
+  background-color: 0;
+}
 
 /* Footer section  */
 footer {
   background-color: rgb(56, 56, 56);
   color: #fff;
   text-align: center;
+  font-size: smaller;
 }
 footer a {
-  color: #a92570;
+  color: #6699a0;
+}
+footer a:hover {
+  color: #a85684;
+  margin-left: 10px;
 }

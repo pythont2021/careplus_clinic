@@ -58,8 +58,8 @@
     </header>
     <section id="home">
       <div class="container-xl home">
-        <div class="welcome-text">
-          <div>
+        <div class="home-text">
+          <div class="text">
             <h1>
               Better <span>Care...</span> <br />
               Better Understanding<br />
@@ -113,27 +113,124 @@
               </li>
             </ul>
           </div>
-          <br /><br />
-          <a href="#booking" class="book-apt-btn">
-            <button class="btn btn-dark">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                fill="currentColor"
-                class="bi bi-calendar-week"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+
+          <div class="book-apt-btn">
+            <a href="#model-container">
+              <button class="btn btn-dark">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  fill="currentColor"
+                  class="bi bi-calendar-week"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                  />
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                  />
+                </svg>
+                &nbsp; Book an Appointment
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <div id="model-container" class="model-container">
+        <div class="appointment_form">
+          <form action="#" method="POST" id="booking" accept-charset="UTF-8">
+            <fieldset>
+              <legend>BOOK YOUR APPOINTMENT NOW</legend>
+              <label for="full_name">Patient's Full Name</label> <br />
+              <input
+                type="text"
+                name="full_name"
+                placeholder="Full name"
+                class="input"
+                required
+              />
+              <br />
+
+              <label for="full_name">Email ID</label> <br />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email *"
+                class="input"
+                required
+              /><br />
+              <label for="full_name">Mobile Number</label> <br />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone *"
+                class="input"
+              />
+
+              <label>
+                Date <br />
+                <input
+                  type="date"
+                  name="Appointment request"
+                  class="input"
+                  required
                 />
-                <path
-                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
-                />
-              </svg>
-              &nbsp; Book an Appointment
-            </button></a
-          >
+              </label>
+
+              <label>
+                <input type="hidden" name="Morning desired" value="no" />
+                <input type="checkbox" name="Morning desired" value="yes" />
+                Morning
+              </label>
+              <label>
+                <input type="hidden" name="Afternoon desired" value="no" />
+                <input type="checkbox" name="Afternoon desired" value="yes" />
+                Afternoon
+              </label>
+
+              <p>Confirmation requested by</p>
+              <div class="inline">
+                <label>
+                  <input
+                    type="radio"
+                    name="Confirmation requested by"
+                    value="email"
+                    checked
+                  />
+                  Email
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="Confirmation requested by"
+                    value="phone"
+                  />
+                  Phone call
+                </label>
+              </div>
+              <input
+                type="submit"
+                value="SUBMIT"
+                class="btn btn-light submit"
+              />
+            </fieldset>
+          </form>
+          <div class="close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              fill="currentColor"
+              class="bi bi-x-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -155,19 +252,6 @@
           </div>
         </div>
         <div class="doctor-card">
-          <img src="./assets/images/doctor (2).jpeg" alt="doctors" />
-          <div class="team_text">
-            <h4 class="doctor-name"><b>Dr. Hari Kishor Reddy</b></h4>
-            <p class="doctor-qualification">
-              <b>MBBS, M S ( Orthopaedics ), MRCS</b>
-            </p>
-            <p>
-              Joint replacement surgeries <br />
-              Specialists
-            </p>
-          </div>
-        </div>
-        <div class="doctor-card">
           <img src="./assets/images/doctor (4).jpeg" alt="doctors" />
           <div class="team_text">
             <h4 class="doctor-name"><b>Dr. Nidhi Nandan</b></h4>
@@ -176,6 +260,19 @@
             </p>
             <p>
               Obstetrics and Gynaecology <br />
+              Specialists
+            </p>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <img src="./assets/images/doctor (2).jpeg" alt="doctors" />
+          <div class="team_text">
+            <h4 class="doctor-name"><b>Dr. Hari Kishor Reddy</b></h4>
+            <p class="doctor-qualification">
+              <b>MBBS, M S ( Orthopaedics ), MRCS</b>
+            </p>
+            <p>
+              Joint replacement surgeries <br />
               Specialists
             </p>
           </div>
@@ -213,25 +310,24 @@
     <section id="about">
       <h1 class="title">About Care Plus</h1>
       <div class="container-xl">
-        <div class="about row">
-          <div class="col-6">
-            <img src="./assets//icons/stethoscope.svg" alt="about" />
-          </div>
-          <div class="col-6">
-            <p>
-              Our core values are built around the thought of patient-first and
-              that each doctor is a human care expert, going above and beyond
-              the call of duty as they live by the belief that every single life
-              is priceless.
-              <br />
-              <br />
-              When they embark on these journeys stories emerge - stories of
-              grit, determination and never giving up.
-              <br />
-              <br />
-              join us on a journey to discover stories that reinforce your
-              belief in life's on care plus
-            </p>
+        <div class="about">
+          <div class="row">
+            <div class="col-4">
+              <img src="./assets//icons/stethoscope.svg" alt="about" />
+            </div>
+            <div class="col-8">
+              <p>
+                Care plus is a newly opened multi-specialty clinic.
+                <br /><br />
+                Our commitment is to provide consistently high-quality
+                healthcare services and also addressing the day-to-day health
+                care needs of the family.
+                <br /><br />
+                In order to maximize convenience and comfort, We offers
+                facilities for Specialist Consultation, Diagnostics, Preventive
+                Health Checks and Pharmacy, all under one roof.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -268,90 +364,12 @@
                   placeholder="Message"
                 ></textarea>
               </div>
-              <div class="col-12">
+              <div class="col-12 contact-form-btn">
                 <button class="btn btn-primary" type="submit">Submit</button>
               </div>
             </form>
           </div>
-          <!-- <div class="appointment_form col-6">
-            <form action="#" method="POST" id="booking" accept-charset="UTF-8">
-              <fieldset>
-                <legend>BOOK YOUR APPOINTMENT NOW</legend>
-                <label for="full_name">Patient's Full Name</label> <br />
-                <input
-                  type="text"
-                  name="full_name"
-                  placeholder="Full name"
-                  class="input"
-                  required
-                />
-                <br />
 
-                <label for="full_name">Email ID</label> <br />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email *"
-                  class="input"
-                  required
-                /><br />
-                <label for="full_name">Mobile Number</label> <br />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone *"
-                  class="input"
-                />
-
-                <label>
-                  Date <br />
-                  <input
-                    type="date"
-                    name="Appointment request"
-                    class="input"
-                    required
-                  />
-                </label>
-
-                <label>
-                  <input type="hidden" name="Morning desired" value="no" />
-                  <input type="checkbox" name="Morning desired" value="yes" />
-                  Morning
-                </label>
-                <label>
-                  <input type="hidden" name="Afternoon desired" value="no" />
-                  <input type="checkbox" name="Afternoon desired" value="yes" />
-                  Afternoon
-                </label>
-
-                <p>Confirmation requested by</p>
-                <div class="inline">
-                  <label>
-                    <input
-                      type="radio"
-                      name="Confirmation requested by"
-                      value="email"
-                      checked
-                    />
-                    Email
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="Confirmation requested by"
-                      value="phone"
-                    />
-                    Phone call
-                  </label>
-                </div>
-                <input
-                  type="submit"
-                  value="SUBMIT"
-                  class="btn btn-light submit"
-                />
-              </fieldset>
-            </form>
-          </div> -->
           <div class="location col-6">
             <div class="address">
               <h3>Where you can find us</h3>
@@ -381,7 +399,7 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.035422300305!2d77.6864027!3d12.9872696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc84bb6b5e9e0a56!2sCare%20Plus%20Multispeciality%20Clinic!5e0!3m2!1sen!2sin!4v1668784266774!5m2!1sen!2sin"
               width="550"
-              height="250"
+              height="200"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
@@ -391,17 +409,28 @@
         </div>
       </div>
     </section>
-    <!-- bootstrap js loader -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+
     <footer>
       <div>
         © 2022 Care Plus Multispeciality Clinic. All Rights Reserved. | Designed
         and developed by <a href="https://beingvin.com/">Beingvin</a>
       </div>
     </footer>
+
+    <!-- bootstrap js loader -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Local js -->
+    <script src="./main.js"></script>
   </body>
 </html>
