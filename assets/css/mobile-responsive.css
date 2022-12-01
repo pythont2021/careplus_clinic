@@ -1,0 +1,93 @@
+section .title {
+  font-size: 1.5rem !important;
+  margin: 10% 0 !important;
+}
+
+/* header  */
+.enquiry {
+  display: none;
+}
+
+nav {
+  display: none !important;
+}
+
+/* Home section  */
+
+#home {
+  background: url("../images/team\ of\ doctors\ \(6\)\ copy.jpg") no-repeat top
+    right fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text h1 {
+  font-size: 1.5rem !important;
+  border-right: none !important;
+  border-bottom: 2px solid white;
+}
+
+.text h1 span {
+  font-size: 4rem !important;
+}
+
+.text ul {
+  font-size: 1rem !important;
+}
+
+.model-container {
+  width: 100vw !important;
+  height: 100vh !important;
+  padding: 0.5rem 0.5rem !important;
+}
+
+.appointment_form {
+  width: 100% !important;
+}
+
+.appointment_form legend {
+  font-size: 1.2rem !important;
+  /* color: #6699a0; */
+  /* color: #0093de; */
+}
+
+.close svg {
+  top: -2.5rem !important;
+  right: 0.5rem !important;
+}
+
+/* Services section  */
+
+.services ul li img {
+  width: 400px !important;
+}
+.services ul li p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* About section  */
+
+.about {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.about img {
+  max-width: 50%;
+  margin-left: 20%;
+}
+
+.about p {
+  font-size: 0.5rem !important;
+  line-height: 1.5;
+}
