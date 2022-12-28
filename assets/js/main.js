@@ -3,11 +3,6 @@ console.log("connected");
 $(document).ready(() => {
 
 
-  //Menu toggle 
-  $("#menu li").click(()=>{
-    console.log("menu button clicked");
-    $("#menu").toggleClass("toggle");
-  })
 
   // appointment form
   $(".book-apt-btn").click(() => {

@@ -118,7 +118,7 @@ nav ul {
 nav ul li a {
   margin-left: 2rem;
   font-size: larger;
-  font-weight: 600;
+  font-weight: 600; 
   color: #a92570;
 }
 nav ul li a:hover {
