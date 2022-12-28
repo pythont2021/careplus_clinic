@@ -103,7 +103,7 @@ section .title {
 }
 
 nav {
-  display: inline-flex;  
+  display: inline-flex;
   position: absolute;
   right: 0;
 }
@@ -130,17 +130,21 @@ nav ul li a:hover {
   box-shadow: none !important;
 }
 
-.container{
+.container {
   width: 100%;
   height: 100%;
+}
+
+#menuToggle {
+  display: none;
 }
 
 /* home section  */
 
 #home {
   position: relative;
-  background: url("../images/team\ of\ doctors\ \(6\)\ copy.jpg")
-    no-repeat top center fixed;
+  background: url("../images/team\ of\ doctors\ \(6\)\ copy.jpg") no-repeat top
+    center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -149,7 +153,6 @@ nav ul li a:hover {
 }
 .home {
   height: 100%;
-  
 }
 .home-text {
   display: flex;
@@ -284,19 +287,28 @@ nav ul li a:hover {
   color: #fff;
 }
 
-.team {
+/* .team {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.owl-carousel.off {
   display: flex;
   justify-content: space-between;
 }
 
-.owl-carousel .owl-item img {
-   width: 0rem ;
+.owl-carousel {
+  z-index: 0 !important;
 }
 
-.owl-carousel .item {
+.owl-carousel .owl-item img {
+  width: 0rem;
+}
+
+/* .owl-carousel .item {
   margin-left: 40%;
   transform: translateX(-50%);
-}
+} */
 
 .doctor-card {
   height: 22rem;
@@ -333,23 +345,25 @@ nav ul li a:hover {
 }
 
 .team_text h4 {
-  color:#a85684;
+  color: #a85684;
 }
-
 
 .team_text span {
   font-size: smaller;
 }
 
-
 /* Services section  */
+
+.disable-height {
+  height: fit-content;
+}
 
 #services {
   position: relative;
   height: 80vh;
 }
 
-.services ul {
+.services {
   display: flex;
   margin-top: 6rem;
   justify-content: space-between;
@@ -359,12 +373,14 @@ nav ul li a:hover {
   color: #383838;
 }
 
-.services ul li img {
-  width: 150px !important;
-  margin-left: 40%;
-  transform: translateX(-50%);
+.services .item {
+  text-align: center;
 }
-.services ul li p {
+
+.services .item img {
+  width: 150px !important;
+}
+.services .item p {
   margin-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
@@ -435,5 +451,3 @@ footer a:hover {
   color: #a85684;
   margin-left: 10px;
 }
-
-

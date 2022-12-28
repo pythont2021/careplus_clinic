@@ -31,14 +31,8 @@
       href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
     /> -->
 
-    <link
-      rel="stylesheet"
-      href="./assets/css/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/css/owl.theme.default.css"
-    />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.css" />
 
     <!-- local css -->
     <link rel="stylesheet" href="./assets//css/style.css" />
@@ -76,7 +70,37 @@
           </nav>
         </div>
       </div>
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" />
+
+        <!--
+        Some spans to act as a hamburger.
+        
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+          <li><a href=".\">Home</a></li>
+          <li><a href="#team">Specialists</a></li>
+          <li><a href="#services">Facilities</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </header>
+
     <section id="home">
       <div class="container">
         <div class="home d-flex justify-content-start align-items-end">
@@ -268,8 +292,8 @@
 
     <section id="team">
       <h1 class="title">Our Specialists</h1>
-      <div class="container team">
-        <div class="owl-carousel owl-theme">
+      <div class="container">
+        <div class="owl-carousel owl-theme team">
           <div class="item">
             <div class="doctor-card">
               <img src="./assets/images/doctor (1).jpeg" alt="doctors" />
@@ -280,7 +304,7 @@
                 </p>
                 <p>
                   Pediatrician , Neonatologist <br />
-                  Specialists <br>
+                  Specialists <br />
                   <span> ( 16 Years Experience Overall ) </span>
                 </p>
               </div>
@@ -296,7 +320,7 @@
                 </p>
                 <p>
                   Obstetrics and Gynaecology <br />
-                  Specialists <br>
+                  Specialists <br />
                   <span> ( 24 Years Experience Overall ) </span>
                 </p>
               </div>
@@ -312,7 +336,7 @@
                 </p>
                 <p>
                   Joint replacement surgeries <br />
-                  Specialists <br>
+                  Specialists <br />
                   <span>( 12 Years Experience ) </span>
                 </p>
               </div>
@@ -324,41 +348,29 @@
 
     <section id="services">
       <h1 class="title">Facilities</h1>
-      <div class="container services">
-        <ul>
-          <div class="owl-carousel owl-theme">
-            <div class="item">
-              <li>
-                <img src="./assets/icons/microscope.png" alt="microscope" />
-                <p>QUALITY LAB TESTS</p>
-              </li>
-            </div>
-            <div class="item">
-              <li>
-                <img src="./assets/icons//nebulizer.png" alt="nebulizer" />
-                <p>NEBULIZATION</p>
-              </li>
-            </div>
-            <div class="item">
-              <li>
-                <img src="./assets/icons/advice.png" alt="day care" />
-                <p>DAY CARE SERVICE</p>
-              </li>
-            </div>
-            <div class="item">
-              <li>
-                <img src="./assets/icons/electrocardiogram.png" alt="ECG" />
-                <p>ECG</p>
-              </li>
-            </div>
-            <div class="item">
-              <li>
-                <img src="./assets/icons/pharmacy.png" alt="microscope" />
-                <p>PHARMACY</p>
-              </li>
-            </div>
+      <div class="container disable-height">
+        <div class="owl-carousel owl-theme services">
+          <div class="item">
+            <img src="./assets/icons/microscope.png" alt="microscope" />
+            <p>QUALITY LAB TESTS</p>
           </div>
-        </ul>
+          <div class="item">
+            <img src="./assets/icons//nebulizer.png" alt="nebulizer" />
+            <p>NEBULIZATION</p>
+          </div>
+          <div class="item">
+            <img src="./assets/icons/advice.png" alt="day care" />
+            <p>DAY CARE SERVICE</p>
+          </div>
+          <div class="item">
+            <img src="./assets/icons/electrocardiogram.png" alt="ECG" />
+            <p>ECG</p>
+          </div>
+          <div class="item">
+            <img src="./assets/icons/pharmacy.png" alt="microscope" />
+            <p>PHARMACY</p>
+          </div>
+        </div>
       </div>
     </section>
     <section id="about">
