@@ -160,13 +160,14 @@ nav {
   background-size: cover !important;
 }
 
+
 .text {
   display: flex;
   flex-direction: column;
 }
 
 .text h1 {
-  font-size: 1.5rem !important;
+  font-size: 2rem !important;
   border-right: none !important;
   border-bottom: 2px solid white;
 }
@@ -200,11 +201,26 @@ nav {
   right: 0.5rem !important;
 }
 
+/* team section */
+.doctor-card {
+  margin: auto;
+}
+
 /* Services section  */
 
+#services {
+  height: 65% !important;
+}
+
+.services {
+  margin-top: 4rem !important;
+}
+
 .services ul li img {
+  display: inline !important;
   width: 400px !important;
 }
+
 .services ul li p {
   margin-top: 1rem;
   text-align: center;
@@ -215,16 +231,59 @@ nav {
 /* About section  */
 
 .about {
-  display: flex !important;
-  flex-direction: column !important;
+  display: inline-block !important;
+  
 }
 
 .about img {
-  max-width: 50%;
-  margin-left: 20%;
+  max-width:120px !important ;
+  float: left;
+  margin-left: 0% !important;
+  
 }
 
 .about p {
-  font-size: 0.5rem !important;
+  font-size: 1.2rem !important;
   line-height: 1.5;
+}
+
+
+/* Contact section  */
+
+#contact {
+height: 100%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-btn button {
+  margin-left: 0 !important;
+  transition: none !important;
+}
+
+.contact-form-btn button:hover {
+  background-color: 0;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* Footer section  */
+footer {
+  margin-top: 20px;
+  background-color: rgb(56, 56, 56);
+  color: #fff;
+  text-align: center;
+  font-size: smaller;
+}
+footer a {
+  color: #6699a0;
+}
+footer a:hover {
+  color: #a85684;
+  margin-left: 10px;
 }

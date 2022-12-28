@@ -363,6 +363,10 @@ nav ul li a:hover {
   height: 80vh;
 }
 
+.services .owl-item img {
+  display: inline-block;
+}
+
 .services {
   display: flex;
   margin-top: 6rem;
@@ -399,15 +403,15 @@ nav ul li a:hover {
 }
 
 .about {
-  height: 20%;
+  
   display: flex;
-  /* align-items: center;
-  align-content: center; */
+  /* align-items: center; */
+  align-content: center;
   color: #fff;
 }
 
 .about img {
-  max-width: 70%;
+  max-width:50%;
   margin-left: 20%;
 }
 
@@ -422,7 +426,8 @@ nav ul li a:hover {
   position: relative;
 }
 .contact {
-  justify-content: space-around;
+  display: flex;
+  justify-content:space-evenly;
 }
 .contact-form-btn button {
   margin-left: 0 !important;
