@@ -1,6 +1,5 @@
 section .title {
-    font-size: 1.5rem !important;
-    margin: 10% 0 !important;
+    font-size: 1.8rem !important;
   }
   
   /* header  */
@@ -158,9 +157,17 @@ section .title {
     background-size: cover !important;
   }
   
-  
+
+  .home-text {
+
+    width: 100% !important;
+  }
 
 
+
+  .text ul {
+    font-size: 1.3rem !important;
+  }
   
   
   .model-container {
@@ -185,6 +192,7 @@ section .title {
   }
   
   /* team section */
+
   .doctor-card {
     margin: auto;
   }
