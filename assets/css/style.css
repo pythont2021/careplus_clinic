@@ -1,4 +1,5 @@
-@import "mobile-responsive.css" screen and (max-width: 576px);
+@import "./breakpoints/extra_small_devices.css" screen and (max-width: 576px);
+@import "./breakpoints/small_devices.css" screen and (min-width: 576px) and (max-width: 768px);
 
 * {
   margin: 0;
@@ -229,6 +230,7 @@ nav ul li a:hover {
   padding: 2rem 1rem;
   border-radius: 15px;
   color: #fff;
+  z-index: 100;
 }
 
 .appointment_form legend {
@@ -271,6 +273,7 @@ nav ul li a:hover {
   /* color: rgba(211, 5, 5, 0.548); */
   color: #a92570;
   cursor: pointer;
+  z-index: 100;
 }
 
 /* .home-text {
