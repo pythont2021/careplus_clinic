@@ -1,3 +1,7 @@
+/* Extra small devices (phones, 576px and down) */
+/* min-width: 576px) */
+
+
 section .title {
   font-size: 1.5rem !important;
   margin: 10% 0 !important;
@@ -258,6 +262,16 @@ height: 100%;
   display: flex;
   flex-direction: column;
 }
+
+.send_message {
+  width: 100% !important; 
+}
+
+.location {
+  margin-top: 20px !important;
+  width: 100% !important;
+}
+
 
 .contact-form-btn button {
   margin-left: 0 !important;

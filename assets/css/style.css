@@ -1,5 +1,7 @@
 @import "./breakpoints/extra_small_devices.css" screen and (max-width: 576px);
 @import "./breakpoints/small_devices.css" screen and (min-width: 576px) and (max-width: 768px);
+@import "./breakpoints/medium_devices.css" screen and (min-width: 768px) and (max-width: 992px);
+
 
 * {
   margin: 0;
@@ -440,6 +442,15 @@ nav ul li a:hover {
 .contact-form-btn button:hover {
   background-color: 0;
 }
+
+.send_message {
+  width: 35%;
+}
+
+.location {
+  width: 60%;
+}
+
 
 iframe {
   width: 100%;

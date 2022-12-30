@@ -45,17 +45,20 @@ $(document).ready(() => {
           0: {
             items: 1,
           },
+          768:{
+            items: 2,
+          }
         },
       };
 
-    if ($(window).width() < 854) {
+    if ($(window).width() < 992) {
       var owlActive = owl.owlCarousel(owlOptions);
     } else {
       owl.addClass("off");
     }
 
     $(window).resize(function () {
-      if ($(window).width() < 854) {
+      if ($(window).width() < 992) {
         if ($(".owl-carousel").hasClass("off")) {
           var owlActive = owl.owlCarousel(owlOptions);
           owl.removeClass("off");

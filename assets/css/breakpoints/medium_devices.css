@@ -1,0 +1,31 @@
+/* Medium devices (landscape tablets, 768px and up) */
+/* min-width: 768px) and (max-width: 992px) */
+
+
+
+/* Header section  */
+nav {
+    bottom: 0;
+  }
+
+/* About section  */
+
+.about img {
+    max-width: 90% !important;
+    margin-left: 0% !important;
+}
+
+  .about p {
+    font-size: 1.2rem !important;
+}
+
+/* Contact section  */
+
+.send_message {
+    width: 35% !important;
+  }
+  
+  .location {
+    width: 60% !important;
+  }
+
