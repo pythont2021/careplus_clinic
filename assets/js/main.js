@@ -7,11 +7,11 @@ $(document).ready(() => {
   // appointment form
   $(".book-apt-btn").click(() => {
     console.log("button clicked");
-    $("#model-container").css("transform", "translate(-50%, -50%) scale(1)");
+    $("#book-appointment").css("transform", "translate(-50%, -50%) scale(1)");
   });
   $(".close").click(() => {
     console.log("button clicked");
-    $("#model-container").css("transform", "translate(-50%, -50%) scale(0)");
+    $("#book-appointment").css("transform", "translate(-50%, -50%) scale(0)");
   });
 
   // Owl Carousel

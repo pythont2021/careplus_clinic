@@ -172,17 +172,17 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   align-content: center;
-  border-bottom: 1px solid white;
 }
+
 .text h1 {
   display: inline-block;
   font-size: 3rem;
   /* color: #288692; */
-  color: #6699a0;
+  color: #fff;
   font-family: "Times New Roman", Times, serif;
   line-height: 1;
   border-right: 2px solid white;
-  padding-right: 2rem;
+  padding-right: 2rem;   
   text-shadow: 0px 1px 1px black;
 }
 
@@ -207,6 +207,16 @@ nav ul li a:hover {
   margin-left: 0 !important;
   transition: none !important;
 }
+
+.book-apt-btn .btn {
+  background-color:#a92570;
+  color: #fff;
+  font-size: medium;
+  font-weight: 600;
+  border:none;
+}
+
+
 
 .btn-primary {
   margin-left: 19rem;
