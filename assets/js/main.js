@@ -37,10 +37,11 @@ $(document).ready(() => {
   // });
 
   $(function () {
-    var owl = $(".owl-carousel"),
+    var owl = $(".demo-1"),
       owlOptions = {
-        loop: false,
+        loop: true,
         margin: 10,
+        autoplay: true,
         responsive: {
           0: {
             items: 1,
@@ -63,6 +64,50 @@ $(document).ready(() => {
           var owlActive = owl.owlCarousel(owlOptions);
           owl.removeClass("off");
         }
+      } else {
+        if (!$(".owl-carousel").hasClass("off")) {
+          owl.addClass("off").trigger("destroy.owl.carousel");
+          owl.find(".owl-stage-outer").children(":eq(0)").unwrap();
+        }
+      }
+    });
+  });
+  $(function () {
+    var owl = $(".demo-2"),
+      owlOptions = {
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        // autoplayTimeout: 2000,
+        smartSpeed: 500,
+        animateOut: 'fadeOut',
+        // animateIn: 'flipInX',
+      
+        responsive: {
+          0: {
+            items: 1,
+          },
+          576:{
+            items: 2,
+          },
+          768:{
+            items: 3,
+          }
+        },
+      };
+
+    if ($(window).width() < 992) {
+      var owlActive = owl.owlCarousel(owlOptions);
+    } else {
+      owl.addClass("off");
+    }
+
+    $(window).resize(function () {
+      if ($(window).width() < 992) {
+        if ($(".owl-carousel").hasClass("off")) {
+          var owlActive = owl.owlCarousel(owlOptions);
+          owl.removeClass("off");
+        } 
       } else {
         if (!$(".owl-carousel").hasClass("off")) {
           owl.addClass("off").trigger("destroy.owl.carousel");
