@@ -156,12 +156,8 @@ nav {
 /* Home section  */
 
 #home {
-  background: url("../../images/team\ of\ doctors\ \(6\)\ copy.jpg") no-repeat top
-    right fixed !important;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
+  background-position: right !important;
+
 }
 
 
@@ -235,16 +231,12 @@ nav {
 /* About section  */
 
 .about {
-  display: inline-block !important;
+  /* display: inline-block !important; */
+  margin: 4%  0!important;
+
   
 }
 
-.about img {
-  max-width:120px !important ;
-  float: left;
-  margin-left: 0% !important;
-  
-}
 
 .about p {
   font-size: 1.2rem !important;

@@ -9,14 +9,12 @@ nav {
   }
 
 /* About section  */
-
-.about img {
-    max-width: 90% !important;
-    margin-left: 0% !important;
+.about {
+  margin: 5%  0!important;
 }
 
   .about p {
-    font-size: 1.2rem !important;
+    font-size: 1.4rem !important;
 }
 
 /* Contact section  */
