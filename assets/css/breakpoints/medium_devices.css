@@ -3,12 +3,15 @@
 
 
 
-/* Header section  */
+
+/*   --------------------->   css for header section  <---------------------  */
+
 nav {
     bottom: 0;
   }
 
-/* About section  */
+/*   --------------------->   css for about section  <---------------------  */
+
 .about {
   margin: 5%  0!important;
 }
@@ -17,7 +20,7 @@ nav {
     font-size: 1.4rem !important;
 }
 
-/* Contact section  */
+/*   --------------------->   css for contact section  <---------------------  */
 
 .send_message {
     width: 35% !important;

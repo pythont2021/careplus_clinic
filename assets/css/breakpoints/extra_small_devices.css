@@ -7,7 +7,9 @@ section .title {
   margin: 10% 0 !important;
 }
 
-/* header  */
+
+/*   --------------------->   css for header section  <---------------------  */
+
 .enquiry {
   display: none;
 }
@@ -153,7 +155,9 @@ nav {
     transform: none;
   }
 
-/* Home section  */
+
+/*   --------------------->   css for home section  <---------------------  */
+
 
 #home {
   background-position: right !important;
@@ -203,34 +207,38 @@ nav {
 
 
 
-/* team section */
+/*   --------------------->   css for specialists section  <---------------------  */
+
 .doctor-card {
   margin: auto;
 }
 
-/* Services section  */
+/*   --------------------->   css for facilities section  <---------------------  */
 
-#services {
+
+#facilities {
   height: 65% !important;
 }
 
-.services {
+.facilities {
   margin-top: 4rem !important;
 }
 
-.services ul li img {
+.facilities ul li img {
   display: inline !important;
   width: 400px !important;
 }
 
-.services ul li p {
+.facilities ul li p {
   margin-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-/* About section  */
+
+/*   --------------------->   css for about section  <---------------------  */
+
 
 .about {
   /* display: inline-block !important; */
@@ -280,18 +288,8 @@ iframe {
   width: 100%;
 }
 
-/* Footer section  */
-footer {
-  margin-top: 20px;
-  background-color: rgb(56, 56, 56);
-  color: #fff;
-  text-align: center;
-  font-size: smaller;
-}
-footer a {
-  color: #6699a0;
-}
-footer a:hover {
-  color: #a85684;
-  margin-left: 10px;
+/*   --------------------->   css for footer section  <---------------------  */
+
+.footerLinks div ul {
+  font-size: 0.7rem !important;
 }
