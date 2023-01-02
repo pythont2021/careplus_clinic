@@ -144,6 +144,20 @@ nav {
   transform: none;
 }
 
+
+.btn-float {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.my-float {
+  margin-top: 11px !important;
+}
+
+.call-btn-float {
+  bottom: 100px !important;
+}
+
 /*   --------------------->   css for home section  <---------------------  */
 
 #home {

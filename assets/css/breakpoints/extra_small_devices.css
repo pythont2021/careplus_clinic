@@ -1,12 +1,10 @@
 /* Extra small devices (phones, 576px and down) */
 /* min-width: 576px) */
 
-
 section .title {
   font-size: 1.5rem !important;
   margin: 10% 0 !important;
 }
-
 
 /*   --------------------->   css for header section  <---------------------  */
 
@@ -68,8 +66,8 @@ nav {
   margin-bottom: 5px;
   position: relative;
 
-  background: #0191DD;
-  
+  background: #0191dd;
+
   border-radius: 3px;
 
   z-index: 1;
@@ -95,7 +93,7 @@ nav {
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #DD117A;
+  background: #dd117a;
 }
 
 /*
@@ -118,7 +116,6 @@ nav {
  * at the top left of the screen
  */
 #menu {
-  
   position: fixed;
   width: 300px;
   height: 450px;
@@ -135,7 +132,6 @@ nav {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transform-origin: 0% 0%;
   transform: translate(100%, 0%);
-
 }
 
 #menu li {
@@ -143,27 +139,34 @@ nav {
   font-size: 30px;
 }
 
-
-
-.menu{
+.menu {
   display: none;
-} 
+}
 /*
  * And let's slide it in from the left
  */
-  #menuToggle input:checked ~ ul {
-    transform: none;
-  }
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
 
+.btn-float {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.my-float {
+  margin-top: 11px !important;
+}
+
+.call-btn-float {
+  bottom: 100px !important;
+}
 
 /*   --------------------->   css for home section  <---------------------  */
 
-
 #home {
   background-position: right !important;
-
 }
-
 
 .text {
   display: flex;
@@ -205,8 +208,6 @@ nav {
   right: 0.5rem !important;
 }
 
-
-
 /*   --------------------->   css for specialists section  <---------------------  */
 
 .doctor-card {
@@ -214,7 +215,6 @@ nav {
 }
 
 /*   --------------------->   css for facilities section  <---------------------  */
-
 
 #facilities {
   height: 65% !important;
@@ -236,28 +236,22 @@ nav {
   font-weight: 700;
 }
 
-
 /*   --------------------->   css for about section  <---------------------  */
-
 
 .about {
   /* display: inline-block !important; */
-  margin: 4%  0!important;
-
-  
+  margin: 4% 0 !important;
 }
-
 
 .about p {
   font-size: 1.2rem !important;
   line-height: 1.5;
 }
 
-
 /* Contact section  */
 
 #contact {
-height: 100%;
+  height: 100%;
 }
 
 .contact {
@@ -266,14 +260,13 @@ height: 100%;
 }
 
 .send_message {
-  width: 100% !important; 
+  width: 100% !important;
 }
 
 .location {
   margin-top: 20px !important;
   width: 100% !important;
 }
-
 
 .contact-form-btn button {
   margin-left: 0 !important;

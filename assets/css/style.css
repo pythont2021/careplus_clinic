@@ -58,9 +58,7 @@ section .title {
   /* font-family: "DM Serif Display", sans-serif; */
 }
 
-
 /*   --------------------->   css for header section  <---------------------  */
-
 
 .header {
   display: flex;
@@ -145,22 +143,49 @@ nav ul li a:hover {
   display: none;
 }
 
+/* floating buttons  */
+
+.btn-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.call-btn-float {
+  bottom: 115px;
+  right: 40px;
+  background-color: #0093de;
+}
+
+.whatsapp-btn-float {
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+}
+
+.my-float {
+  margin-top: 16px;
+}
 
 /*   --------------------->   css for home section  <---------------------  */
-
-
 
 #home {
   position: relative;
   background: url("../../images/team\ of\ doctors\ \(6\)\ copy.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 
-    -webkit-background-size: cover;
-  -moz-background-size: cover ;
-  -o-background-size: cover ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   box-shadow: inset 50px 0px 150px black;
 }
 .home {
@@ -187,7 +212,7 @@ nav ul li a:hover {
   font-family: "Times New Roman", Times, serif;
   line-height: 1;
   border-right: 2px solid white;
-  padding-right: 2rem;   
+  padding-right: 2rem;
   text-shadow: 0px 1px 1px black;
 }
 
@@ -214,14 +239,12 @@ nav ul li a:hover {
 }
 
 .book-apt-btn .btn {
-  background-color:#a92570;
+  background-color: #a92570;
   color: #fff;
   font-size: medium;
   font-weight: 600;
-  border:none;
+  border: none;
 }
-
-
 
 .btn-primary {
   margin-left: 19rem;
@@ -383,7 +406,7 @@ nav ul li a:hover {
   height: fit-content;
 }
 
-#facilities{
+#facilities {
   position: relative;
   height: 80vh;
 }
@@ -446,12 +469,10 @@ nav ul li a:hover {
   color: #fff;
 }
 
-
 .about p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
-
 
 /*   --------------------->   css for contact section  <---------------------  */
 
@@ -483,15 +504,13 @@ iframe {
   width: 100%;
 }
 
-
-
 /*   --------------------->   css for footer section  <---------------------  */
 
 footer {
   position: relative;
   width: 100%;
   bottom: 0;
-  background-color:#0e2f33;
+  background-color: #0e2f33;
   color: #fff;
   padding: 3% 6% 8%;
   text-align: center;
@@ -499,7 +518,7 @@ footer {
 }
 
 footer p {
-  margin-bottom: 0rem ;
+  margin-bottom: 0rem;
 }
 
 footer .copyRight {
@@ -516,14 +535,14 @@ footer .copyRight {
 
 footer .copyRight a {
   text-decoration: none;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   /* font-family: 'Smooch', cursive; */
   color: #fff;
   transition: 0.5s;
 }
 
 footer .copyRight a:hover {
-  color:#a92570;
+  color: #a92570;
 }
 
 .footerLinks {
