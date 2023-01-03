@@ -12,17 +12,6 @@ nav {
 }
 
 /* hamburgermenu */
-#menuToggle {
-  display: block !important;
-  position: absolute;
-  top: 45px;
-  right: 50px;
-  z-index: 1;
-
-  -webkit-user-select: none;
-  user-select: none;
-}
-
 #menuToggle li a {
   margin-left: 2rem;
   color: #fff;
@@ -52,25 +41,20 @@ nav {
 }
 
 /*
-   * Just a quick hamburger
-   */
+ * Just a quick hamburger
+ */
 #menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-
   background: #0191dd;
-
   border-radius: 3px;
-
-  z-index: 1;
-
   transform-origin: 4px 0px;
-
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  z-index: 1;
 }
 
 #menuToggle span:first-child {
@@ -81,69 +65,51 @@ nav {
   transform-origin: 0% 100%;
 }
 
-/* 
-   * Transform all the slices of hamburger
-   * into a crossmark.
-   */
+/*  Transform all the slices of hamburger into a crossmark. */
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #dd117a;
 }
 
-/*
-   * But let's hide the middle one.
-   */
+/* hide the middle one. */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
-   * Ohyeah and the last one should go the other direction
-   */
+/* the last one should go the other direction */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
-   * Make this absolute positioned
-   * at the top left of the screen
-   */
 #menu {
   position: fixed;
-  width: 300px;
-  height: 450px;
-  margin: 38px 0 0 -200px;
-  padding: 50px;
-  padding-top: 50px;
-  z-index: 1;
-
+  width: 250px;
+  height: 350px;
+  margin: 38px 0 0 -160px;
+  padding: 30px 35px;
   background-color: rgba(56, 56, 56, 0.4);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transform-origin: 0% 0%;
   transform: translate(100%, 0%);
+  visibility: hidden;
+    z-index: 10;
 }
 
 #menu li {
   padding: 10px 0;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-.menu {
-  display: none;
-}
-/*
-   * And let's slide it in from the left
-   */
+/* slide it in from the left */
 #menuToggle input:checked ~ ul {
   transform: none;
+  visibility:visible;
 }
-
 
 .btn-float {
   width: 50px !important;
@@ -156,6 +122,11 @@ nav {
 
 .call-btn-float {
   bottom: 100px !important;
+  right: 35px !important;
+}
+
+.whatsapp-btn-float {
+  right: 35px !important;
 }
 
 /*   --------------------->   css for home section  <---------------------  */
@@ -172,9 +143,8 @@ nav {
   font-size: 1.3rem !important;
 }
 
-.model-container {
+.popup-container {
   width: 100vw !important;
-  /* height: 100vh !important; */
   padding: 0.5rem 0.5rem !important;
 }
 
@@ -184,13 +154,6 @@ nav {
 
 .appointment_form legend {
   font-size: 1.2rem !important;
-  /* color: #6699a0; */
-  /* color: #0093de; */
-}
-
-.close svg {
-  top: -2.5rem !important;
-  right: 0.5rem !important;
 }
 
 /*   --------------------->   css for specialists section  <---------------------  */
@@ -200,7 +163,6 @@ nav {
 }
 
 /*   --------------------->   css for facilities section  <---------------------  */
-
 
 #facilities {
   height: 65% !important;
@@ -224,7 +186,6 @@ nav {
 
 /*   --------------------->   css for about section  <---------------------  */
 
-
 .about {
   display: inline-block !important;
   margin: 6% 0 !important;
@@ -236,7 +197,6 @@ nav {
 }
 
 /*   --------------------->   css for contact section  <---------------------  */
-
 
 #contact {
   height: 100%;

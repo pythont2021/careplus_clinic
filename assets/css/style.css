@@ -231,6 +231,8 @@ nav ul li a:hover {
   text-shadow: 0px 1px 1px black;
 }
 
+/* book appointment popupbox  */
+
 .book-apt-btn {
   /* text-align:center; */
   margin-top: 2rem;
@@ -250,8 +252,9 @@ nav ul li a:hover {
   margin-left: 19rem;
 }
 
-.model-container {
-  display: inline-flex;
+.popup-container {
+  display: flex;
+  flex-direction:column;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -261,15 +264,22 @@ nav ul li a:hover {
   max-height: 90vh;
   top: 50%;
   left: 50%;
-  z-index: 100;
   transform: translate(-50%, -50%) scale(0);
-  transition: 0.5s;
+  visibility: hidden;
+  transition: transform 0.4s, scale 0.4s;
+  z-index: 100;
 }
+
+.open-popup {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 
 .appointment_form {
   position: relative;
   max-width: 24rem;
-  height: 32rem;
+  max-height: 32rem;
   background-color: rgba(56, 56, 56, 0.4);
   padding: 2rem 1rem;
   border-radius: 15px;
@@ -291,38 +301,34 @@ nav ul li a:hover {
   margin-bottom: 1rem;
   border-radius: 5px;
   color: #5a5057;
-  font-size: large;
-  font-weight: 500;
+  font-size: medium;
 }
 
-.submit {
+.submit-btn {
   margin-top: 1rem;
   width: 100%;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
   background-color: #288692;
   color: #fff;
   border: none;
   border-radius: 10px;
   letter-spacing: 1px;
 }
-.submit:hover {
+.submit-btn:hover {
   background-color: #a85684;
   color: #fff;
 }
+
 .close svg {
-  display: inline-flex;
-  position: absolute;
-  top: -2rem;
-  right: -2rem;
+  /* display: inline-flex;
+  position: absolute; */
+  top: 1rem;
+  right: 1rem;
   /* color: rgba(211, 5, 5, 0.548); */
   color: #a92570;
   cursor: pointer;
   z-index: 100;
 }
-
-/* .home-text {
- 
-} */
 
 /*   --------------------->   css for specialists section  <---------------------  */
 
@@ -514,7 +520,7 @@ footer {
   color: #fff;
   padding: 3% 6% 8%;
   text-align: center;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 footer p {

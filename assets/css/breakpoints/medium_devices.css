@@ -7,6 +7,17 @@ nav {
   bottom: 0;
 }
 
+/*   --------------------->   css for header section  <---------------------  */
+
+.popup-container {
+  width: 80vw !important;
+  padding: 0.5rem 0.5rem !important;
+}
+
+.appointment_form {
+  width: 100% !important;
+}
+
 
 
 /*   --------------------->   css for about section  <---------------------  */
