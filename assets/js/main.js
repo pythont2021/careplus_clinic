@@ -141,5 +141,5 @@ function sendMsg() {
     From: "notification@beingvin.com",
     Subject: "Careplus Feedback",
     Body: `Name : ${name} <br/> Email : ${email} <br/> Message : ${message}`,
-  }).then((message) => alert(message));
+  }).then((message) => alert("Thank You ! \nFor sharing your feedback"));
 }
