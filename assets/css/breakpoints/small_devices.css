@@ -12,6 +12,17 @@ nav {
 }
 
 /* hamburgermenu */
+#menuToggle {
+  display: block !important;
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 #menuToggle li a {
   margin-left: 2rem;
   color: #fff;
@@ -89,7 +100,7 @@ nav {
   height: 350px;
   margin: 38px 0 0 -160px;
   padding: 30px 35px;
-  background-color: rgba(56, 56, 56, 0.4);
+  backdrop-filter: blur(25px);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -97,7 +108,7 @@ nav {
   transform-origin: 0% 0%;
   transform: translate(100%, 0%);
   visibility: hidden;
-    z-index: 10;
+  z-index: 10;
 }
 
 #menu li {
@@ -199,7 +210,7 @@ nav {
 /*   --------------------->   css for contact section  <---------------------  */
 
 #contact {
-  height: 100%;
+  height: 100% !important;
 }
 
 .contact {
@@ -207,11 +218,11 @@ nav {
   flex-direction: column;
 }
 
-.send_message {
+.feedback{
   width: 100% !important;
 }
 
-.location {
+.find-us {
   margin-top: 20px !important;
   width: 100% !important;
 }

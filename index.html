@@ -24,6 +24,8 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
     />
+<!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -115,7 +117,7 @@
         </a>
 
         <a
-          href="https://api.whatsapp.com/send?phone=917975658380&text=Hello Careplus clinic , My name is ...  and i want to book an appointment on this date 01/01/2022"
+          href="https://api.whatsapp.com/send?phone=917975658380&text=Hi care plus, I'm interested in scheduling an appointment"
           class="btn-float whatsapp-btn-float animate__animated animate__bounceIn"
           target="_blank"
         >
@@ -182,7 +184,7 @@
                 </li>
               </ul>
             </div>
-            <div class="book-apt-btn animate__animated animate__slideInUp">
+            <div class="book-apt-btn animate__animated animate__fadeInDown">
               <a href="#book-appointment">
                 <button class="btn">
                   <svg
@@ -203,22 +205,22 @@
             </div>
           </div>
           <div id="book-appointment" class="popup-container">
-            <div class="close">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                fill="currentColor"
-                class="bi bi-x-circle-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
-                />
-              </svg>
-            </div>
             <div class="appointment_form">
-              <form onsubmit="sendAppointment(); reset(); return false" >
+              <div class="close">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  fill="currentColor"
+                  class="bi bi-x-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
+                  />
+                </svg>
+              </div>
+              <form onsubmit="sendAppointment(); reset(); return false ">
                 <fieldset>
                   <legend>BOOK YOUR APPOINTMENT</legend>
                   <label for="full_name">Patient's Full Name</label> <br />
@@ -226,107 +228,120 @@
                     type="text"
                     name="full_name"
                     id="apt-full-name"
-                    placeholder="Full name"
+                    placeholder="Enter full name"
                     class="input"
                     required
                   />
                   <br />
 
-                  <label for="full_name">Email ID</label> <br />
-                  <input
-                    type="email"
-                    name="email"
-                    id="apt-email"
-                    placeholder="Email *"
-                    class="input"
-                    required
-                  /><br />
-                  <label for="full_name">Mobile Number</label> <br />
-                  <input
-                    type="tel"
-                    name="phone"
-                    id="apt-phone"
-                    placeholder="Phone *"
-                    class="input"
-                  />
-
-                  <label>
-                    Date <br />
-                    <input
-                      type="date"
-                      name="Appointment request"
-                      id="apt-date"
-                      class="input"
-                      required
-                    />
-                  </label>
-
-                  <label>
-                    <input
-                      type="hidden"
-                      name="Morning desired"
-                      value="no"
-                      id="apt-mrng"
-                    />
-                    <input
-                      type="checkbox"
-                      name="Morning desired"
-                      value="yes"
-                      id="apt-mrng"
-                    />
-                    Morning
-                  </label>
-                  <label>
-                    <input
-                      type="hidden"
-                      name="Afternoon desired"
-                      value="no"
-                      id="apt-aftrn"
-                    />
-                    <input
-                      type="checkbox"
-                      name="Afternoon desired"
-                      value="yes"
-                      id="apt-aftrn"
-                    />
-                    Afternoon
-                  </label>
-
-                  <p>Confirmation requested by</p>
-                  <div class="inline">
-                    <label>
+                  <div class="row">
+                    <div class="col-7">
+                      <label for="email">Email</label> <br />
                       <input
-                        type="radio"
-                        name="Confirmation requested by"
-                        value="email"
-                        id="apt-confm-email"
-                        checked
+                        type="email"
+                        name="email"
+                        id="apt-email"
+                        placeholder="Enter email"
+                        class="input"
+                        required
                       />
+                    </div>
+                    <div class="col-5">
+                      <label for="mobile">Mobile</label> <br />
+                      <input
+                        type="text"
+                        name="mobile"
+                        class="input"
+                        id="apt-mobile"
+                        placeholder="Enter number "
+                        required=""
+                        pattern="\d*"
+                        min="10"
+                        maxlength="12"
+                        title="Enter 10 Digit No"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-7">
+                      <label> Date </label>
+                      <br />
+                      <input
+                        type="date"
+                        name="date"
+                        id="apt-date"
+                        class="input date"
+                        required
+                      />
+                    </div>
+                    <div class="col-5">
+                      <label> Time </label> <br />
+                      <input
+                        type="time"
+                        name="time"
+                        id="apt-time"
+                        class="input"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <label for="note">Message</label> <br />
+                  <textarea
+                    name="note"
+                    id="apt-message"
+                    cols="45"
+                    rows="2"
+                    placeholder="Keep it short and simple"
+                  ></textarea>
+
+                  <div class="inline">
+                    <p>Confirmation requested by</p>
+                    <label>
+                      <input type="radio" name="apt-cnfm" value="email" />
                       Email
                     </label>
                     <label>
                       <input
                         type="radio"
-                        name="Confirmation requested by"
-                        id="apt-confm-phone"
-                        value="phone"
+                        name="apt-cnfm"
+                        value="phone call"
+                        checked
                       />
                       Phone call
                     </label>
                   </div>
                 </fieldset>
-                <button class="btn btn-light submit-btn" type="submit">Submit</button>
+                <button class="btn btn-light submit-btn" type="submit">
+                  Submit
+                </button>
               </form>
             </div>
-       
+            <div class="confirmation-box">
+              <div class="close">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  fill="currentColor"
+                  class="bi bi-x-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <section id="specialists">
-      <h1 class="title">Our Specialists</h1>
       <div class="container">
+        <h1 class="title">Our Specialists</h1>
         <div class="owl-carousel owl-theme specialists demo-1">
           <div class="item">
             <div class="doctor-card">
@@ -381,8 +396,8 @@
     </section>
 
     <section id="facilities">
-      <h1 class="title">Facilities</h1>
       <div class="container disable-height">
+        <h1 class="title">Facilities</h1>
         <div class="owl-carousel owl-theme facilities demo-2">
           <div class="item">
             <img src="./assets/icons/microscope.png" alt="microscope" />
@@ -411,11 +426,7 @@
       <div class="mask">
         <div class="container">
           <h1 class="title">About Care Plus</h1>
-
           <div class="about">
-            <!-- <div>
-              <img src="./assets//icons/stethoscope.svg" alt="about" />
-            </div> -->
             <div>
               <p>
                 Care plus is a newly opened multi-specialty clinic.
@@ -435,78 +446,71 @@
     </section>
 
     <section id="contact">
-      <h1 class="title">Contact Us</h1>
       <div class="container">
+        <h1 class="title">Contact Us</h1>
         <div class="contact">
-          <div class="send_message">
+          <div class="feedback">
             <form onsubmit="sendMsg(); reset(); return false">
-              <h3>Feel free ask anything</h3>
+              <h3>Send us your feedback</h3>
               <div class="mb-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="contact-name"
-                  placeholder="Name"
-                />
+                <input type="text" id="contact-name" placeholder="Your name" />
               </div>
               <div class="mb-4">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="contact-email"
-                  placeholder="Email"
-                />
+                <input type="email" id="contact-email" placeholder="Email" />
               </div>
               <div class="mb-4">
                 <textarea
-                  class="form-control"
                   id="contact-message"
                   rows="3"
-                  placeholder="Message"
+                  placeholder="Write your message"
                 ></textarea>
               </div>
               <div class="contact-form-btn">
-                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-outline-dark" type="submit">
+                  Submit
+                </button>
               </div>
             </form>
           </div>
 
-          <div class="location">
-            <div class="address">
-              <h3>Where you can find us</h3>
-              <div class="">
-                <div class="">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-geo-alt-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
-                    />
-                  </svg>
-                </div>
-                <div class="">
+          <div class="find-us">
+            <h3>You can find us here</h3>
+            <div class="row">
+              <div class="col-4">
+                <div class="address-social">
+                  <i class="bi bi-geo-alt-fill"></i>
                   <p>
                     B4,5, Commercial Complex, Nester Raga, Dr Puneeth Rajkumar
                     Rd, Mahadevapura, Bengaluru. <br />
                   </p>
+                  <p>
+                    <i class="bi bi-telephone-fill"></i> +91 7975658380 <br />
+                  </p>
+                  <p>
+                    <i class="bi bi-envelope-at-fill"></i> careplus@gmail.com <br />
+                  </p>
+                  follow us on : <br/>
+                  <ul >
+                    <li><i class="bi bi-facebook"></i></li>
+                    <li><i class="bi bi-instagram"></i></li>
+                    <li><i class="bi bi-globe-central-south-asia"></i></li>
+                  </ul>
                 </div>
               </div>
-            </div>
 
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.035422300305!2d77.6864027!3d12.9872696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc84bb6b5e9e0a56!2sCare%20Plus%20Multispeciality%20Clinic!5e0!3m2!1sen!2sin!4v1668784266774!5m2!1sen!2sin"
-              width="550"
-              height="200"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+              <div class="col-8">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.035422300305!2d77.6864027!3d12.9872696!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc84bb6b5e9e0a56!2sCare%20Plus%20Multispeciality%20Clinic!5e0!3m2!1sen!2sin!4v1668784266774!5m2!1sen!2sin"
+                  width="550"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  class="map"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </div>

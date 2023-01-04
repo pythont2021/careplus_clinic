@@ -6,7 +6,6 @@ $(document).ready(() => {
     $("#book-appointment").addClass("open-popup");
   });
   $(".close").click(() => {
-    console.log("button clicked");
     $("#book-appointment").removeClass("open-popup");
   });
 
@@ -94,34 +93,40 @@ $(document).ready(() => {
   });
 });
 
+// smtp js
+
 function sendAppointment() {
   var name = document.getElementById("apt-full-name").value;
   var email = document.getElementById("apt-email").value;
-  var phone = document.getElementById("apt-phone").value;
+  var mobile = document.getElementById("apt-mobile").value;
   var date = document.getElementById("apt-date").value;
-  var morning = document.getElementById("apt-mrng").value;
-  var afternon = document.getElementById("apt-aftrn").value;
-  var confByEmail = document.getElementById("apt-confm-email").value;
-  var confByPhone = document.getElementById("apt-confm-phone").value;
+  var time = document.getElementById("apt-time").value;
+  var message = document.getElementById("apt-message").value;
+  var confirmation = document.querySelector(
+    'input[name="apt-cnfm"]:checked'
+  ).value;
 
   Email.send({
     SecureToken: "81e3a2bc-8503-4a05-994e-75f5c6bfa553",
     To: "pythont2021@gmail.com",
     From: "notification@beingvin.com",
-    Subject: "Careplus",
-    Body: `Name : ${name} <br/> 
+    Subject: "Careplus New Appointment",
+    Body: ` <h2>Patient Details</h2> <br/> 
+    Name : ${name} <br/> 
     Email : ${email} <br/> 
     Date : ${date} <br/> 
-    Phone : ${phone} <br/> 
-    Morning : ${morning} <br/> 
-    Afternon : ${afternon} <br/> 
-    Confirm By email : ${confByEmail} <br/> 
-    Confirm By phone : ${confByPhone}`,
+    Time : ${time} <br/>
+    Mobile : ${mobile} <br/> 
+    Confirm By: ${confirmation} <br/>
+    Message : ${message} <br/>`,
   }).then((message) => {
     // alert(message);
     console.log("form data sent");
     $(".appointment_form").css("display", "none");
-    $("#book-appointment").append( "<h1>sent</h1>" )  
+    $(".confirmation-box").css("display", "block");
+    $(".confirmation-box").append(
+      "<div class='cnfm-text'><h1>Thank You!</h1><i class='fa fa-check main-content__checkmark'></i><br/><p>We'll confirm your appointment soon<p></div>"
+    );
   });
 }
 
@@ -134,7 +139,7 @@ function sendMsg() {
     SecureToken: "81e3a2bc-8503-4a05-994e-75f5c6bfa553",
     To: "pythont2021@gmail.com",
     From: "notification@beingvin.com",
-    Subject: "Careplus",
+    Subject: "Careplus Feedback",
     Body: `Name : ${name} <br/> Email : ${email} <br/> Message : ${message}`,
   }).then((message) => alert(message));
 }
