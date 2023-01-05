@@ -257,3 +257,7 @@ footer a:hover {
   color: #a85684;
   margin-left: 10px;
 }
+
+.footerLinks div ul {
+  font-size: 0.8rem !important;
+}

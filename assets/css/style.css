@@ -645,11 +645,16 @@ footer .copyRight a:hover {
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   padding: 10% 0%;
+  word-wrap: break-word !important;
   z-index: 1;
 }
 
 .footerLinks div ul li {
   padding: 2% 0;
+}
+
+.footerLinks div ul li span{
+  word-break: break-all;
 }
 
 .footerLinks div ul .fas {

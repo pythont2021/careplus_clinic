@@ -91,6 +91,11 @@ $(document).ready(() => {
       }
     });
   });
+
+  // Footer year 
+  var year = new Date().getFullYear()
+  $(".copyRight span").text(year)
+  // console.log(year)
 });
 
 // smtp js
