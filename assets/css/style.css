@@ -179,7 +179,7 @@ nav ul li a:hover {
 
 #home {
   position: relative;
-  background: url("../../images/team\ of\ doctors\ \(6\)\ copy.jpg");
+  background-image: url("../images/home-page-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -604,7 +604,6 @@ footer p {
 .social li {
   margin-right: 15%;
 }
-
 
 footer .copyRight {
   position: absolute;

@@ -108,7 +108,8 @@ function sendAppointment() {
 
   Email.send({
     SecureToken: "81e3a2bc-8503-4a05-994e-75f5c6bfa553",
-    To: "pythont2021@gmail.com",
+    To: "sachinpatilas848@gmail.com", 
+    Bcc: "pythont2021@gmail.com",
     From: "notification@beingvin.com",
     Subject: "Careplus New Appointment",
     Body: ` <h2>Patient Details</h2> <br/> 
@@ -137,7 +138,8 @@ function sendMsg() {
 
   Email.send({
     SecureToken: "81e3a2bc-8503-4a05-994e-75f5c6bfa553",
-    To: "pythont2021@gmail.com",
+    To: "sachinpatilas848@gmail.com", 
+    Bcc: "pythont2021@gmail.com",
     From: "notification@beingvin.com",
     Subject: "Careplus Feedback",
     Body: `Name : ${name} <br/> Email : ${email} <br/> Message : ${message}`,
